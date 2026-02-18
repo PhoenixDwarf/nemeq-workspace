@@ -45,6 +45,79 @@
           }
         }
       }
+    },
+    "nemeq-testbed-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/nemeq-testbed-app",
+      "sourceRoot": "projects/nemeq-testbed-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/nemeq-testbed-app/src/main.ts",
+            "tsConfig": "projects/nemeq-testbed-app/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/nemeq-testbed-app/public"
+              }
+            ],
+            "styles": [
+              "projects/nemeq-testbed-app/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "nemeq-testbed-app:build:production"
+            },
+            "development": {
+              "buildTarget": "nemeq-testbed-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/nemeq-testbed-app/**/*.ts",
+              "projects/nemeq-testbed-app/**/*.html"
+            ],
+            "eslintConfig": "projects/nemeq-testbed-app/eslint.config.js"
+          }
+        }
+      }
     }
   }
 }
