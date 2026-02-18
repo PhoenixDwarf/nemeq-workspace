@@ -1,4 +1,9 @@
 <h1 class="text-3xl font-bold underline">Hello World</h1>
 <p>Hello again</p>
 
-<lib-nemeq-side-menu />
+<lib-nemeq-side-menu
+  [authenticated]="authenticated()"
+  (login)="login()"
+  (logout)="logout()"
+  [titleColor]="availableColors.blue"
+/>
