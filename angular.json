@@ -2,9 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "6a6cdb06-340b-42e7-8436-480927d159c9",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   },
   "newProjectRoot": "projects",
   "projects": {
+    "nemeq-side-menu": {
+      "projectType": "library",
+      "root": "projects/nemeq-side-menu",
+      "sourceRoot": "projects/nemeq-side-menu/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nemeq-side-menu/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/nemeq-side-menu/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/nemeq-side-menu/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/nemeq-side-menu/**/*.ts",
+              "projects/nemeq-side-menu/**/*.html"
+            ],
+            "eslintConfig": "projects/nemeq-side-menu/eslint.config.js"
+          }
+        }
+      }
+    }
   }
 }

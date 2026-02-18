@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint",
+    "nemeq-side-menu:build": "ng build nemeq-side-menu",
+    "nemeq-side-menu:lint": "ng lint nemeq-side-menu",
+    "nemeq-side-menu:test": "ng test nemeq-side-menu --no-watch --no-progress",
+    "nemeq-side-menu:publish": "npm run nemeq-side-menu:lint && npm run nemeq-side-menu:test && npm run nemeq-side-menu:build && npm publish dist/nemeq-side-menu"
   },
   "prettier": {
     "printWidth": 100,
@@ -33,8 +38,15 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular/build": "^21.1.4",
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.0",
-    "typescript": "~5.9.2"
+    "angular-eslint": "21.2.0",
+    "eslint": "^9.39.2",
+    "jsdom": "^27.1.0",
+    "ng-packagr": "^21.1.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "8.50.1",
+    "vitest": "^4.0.8"
   }
 }
