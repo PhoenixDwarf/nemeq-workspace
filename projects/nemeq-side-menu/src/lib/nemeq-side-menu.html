@@ -6,9 +6,8 @@
       <h6
         class="text-2xl font-bold block antialiased tracking-normal font-sans leading-relaxed text-white"
       >
-        <!-- TODO: Customize colors-->
-        <span [classList]="[titleColor()]">Neme</span>
-        <span class="font-thin">K</span>
+        <span [classList]="[titleColor()]">{{ title() }}</span>
+        <span class="font-thin">{{ subTitle() }}</span>
       </h6>
     </a>
     <button

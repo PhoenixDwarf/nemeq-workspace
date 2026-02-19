@@ -15,6 +15,8 @@ export enum TitleColor {
 })
 export class NemeqSideMenu {
   authenticated = input(false);
+  title = input('Neme');
+  subTitle = input('Q');
   titleColor = input<TitleColor>(TitleColor.green);
 
   login = output();
