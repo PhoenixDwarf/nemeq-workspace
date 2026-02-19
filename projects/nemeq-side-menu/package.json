@@ -1,6 +1,22 @@
 {
   "name": "nemeq-side-menu",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhoenixDwarf/nemeq-workspace"
+  },
+  "keywords": [
+    "First Angular library",
+    "Angular",
+    "Library",
+    "Side Menu",
+    "Don't use this"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhoenixDwarf/nemeq-workspace/issues"
+  },
+  "homepage": "https://github.com/PhoenixDwarf",
   "peerDependencies": {
     "@angular/common": "^21.1.0",
     "@angular/core": "^21.1.0"

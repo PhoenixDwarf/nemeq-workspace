@@ -11,7 +11,7 @@
     "nemeq-side-menu:build": "ng build nemeq-side-menu",
     "nemeq-side-menu:lint": "ng lint nemeq-side-menu",
     "nemeq-side-menu:test": "ng test nemeq-side-menu --no-watch --no-progress",
-    "nemeq-side-menu:publish": "npm run nemeq-side-menu:lint && npm run nemeq-side-menu:test && npm run nemeq-side-menu:build && npm publish dist/nemeq-side-menu"
+    "nemeq-side-menu:publish": "npm run nemeq-side-menu:lint && npm run nemeq-side-menu:test && npm run nemeq-side-menu:build && npm publish dist/nemeq-side-menu/"
   },
   "prettier": {
     "printWidth": 100,
