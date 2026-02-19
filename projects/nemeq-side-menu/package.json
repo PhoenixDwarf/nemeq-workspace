@@ -1,6 +1,6 @@
 {
   "name": "nemeq-side-menu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/PhoenixDwarf/nemeq-workspace"
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/PhoenixDwarf",
   "peerDependencies": {
     "@angular/common": "^21.1.0",
-    "@angular/core": "^21.1.0"
+    "@angular/core": "^21.1.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "tailwindcss": "^4.1.12"
   },
   "dependencies": {
     "tslib": "^2.3.0"
